@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ဆက်တင်များ - Burme Mark AI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/update.css">
+    <link rel="stylesheet" href="../css/setting.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loader">
+        <div class="loader-content">
+            <div class="logo">
+                <img src="../assets/logo.png" alt="Burme Mark AI">
+            </div>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+            <div class="loading-text">တင်ဆောင်နေသည်...</div>
+        </div>
+    </div>
+
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+    </div>
+
+    <!-- Main Layout -->
+    <div class="app-container">
+        <!-- Side Navigation -->
+        <nav class="side-nav" id="sideNav">
+            <!-- Navigation content same as index.html -->
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="content-header">
+                <h1>ဆက်တင်များ</h1>
+                <p>သင့်အကောင့်ကို စိတ်ကြိုက်ပြင်ဆင်ပါ</p>
+            </div>
+
+            <div class="content-body">
+                <div class="settings-container">
+                    <!-- Settings Sidebar -->
+                    <div class="settings-sidebar">
+                        <div class="settings-menu">
+                            <button class="settings-menu-item active" data-target="account">
+                                <i class="fas fa-user-circle"></i>
+                                <span>အကောင့်ဆက်တင်များ</span>
+                            </button>
+                            <button class="settings-menu-item" data-target="preferences">
+                                <i class="fas fa-sliders-h"></i>
+                                <span>စိတ်ကြိုက်ဆက်တင်များ</span>
+                            </button>
+                            <button class="settings-menu-item" data-target="privacy">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>ကိုယ်ရေးကိုယ်တာမူဝါဒ</span>
+                            </button>
+                            <button class="settings-menu-item" data-target="notifications">
+                                <i class="fas fa-bell"></i>
+                                <span>အသိပေးချက်များ</span>
+                            </button>
+                            <button class="settings-menu-item" data-target="language">
+                                <i class="fas fa-language"></i>
+                                <span>ဘာသာစကားများ</span>
+                            </button>
+                            <button class="settings-menu-item" data-target="accessibility">
+                                <i class="fas fa-universal-access"></i>
+                                <span>အသုံးပြုနိုင်မှုဆိုင်ရာ</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Settings Content -->
+                    <div class="settings-content">
+                        <!-- Account Settings -->
+                        <div class="settings-section active" id="account-section">
+                            <h2>အကောင့်ဆက်တင်များ</h2>
+                            
+                            <div class="settings-card">
+                                <h3>ကိုယ်ရေးအချက်အလက်</h3>
+                                <form class="settings-form">
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="firstName">အမည်၏အရှေ့ဆုံးစာလုံး</label>
+                                            <input type="text" id="firstName" value="ဧဝါချို">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="lastName">အမည်၏နောက်ဆုံးစာလုံး</label>
+                                            <input type="text" id="lastName" value="ထွန်း">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="email">အီးမေးလ်</label>
+                                        <input type="email" id="email" value="ewakhio@example.com">
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="username">အသုံးပြုသူအမည်</label>
+                                        <input type="text" id="username" value="ewakhio">
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="bio">မိမ်အကြောင်း</label>
+                                        <textarea id="bio" rows="4">ဒီဂျစ်တယ်စီးပွားရေးလုပ်ငန်းရှင်နှင့် AI နည်းပညာဝါသနာရှင်</textarea>
+                                    </div>
+                                    
+                                    <button type="submit" class="btn btn-primary">ပြောင်းလဲမှုများသိမ်းဆည်းရန်</button>
+                                </form>
+                            </div>
+                            
+                            <div class="settings-card">
+                                <h3>လျှို့ဝှက်နံပါတ်ပြောင်းလဲရန်</h3>
+                                <form class="settings-form">
+                                    <div class="form-group">
+                                        <label for="currentPassword">လက်ရှိလျှို့ဝှက်နံပါတ်</label>
+                                        <input type="password" id="currentPassword">
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="newPassword">လျှို့ဝှက်နံပါတ်အသစ်</label>
+                                        <input type="password" id="newPassword">
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="confirmNewPassword">လျှို့ဝှက်နံပါတ်အသစ် ထပ်မံအတည်ပြုရန်</label>
+                                        <input type="password" id="confirmNewPassword">
+                                    </div>
+                                    
+                                    <button type="submit" class="btn btn-primary">လျှို့ဝှက်နံပါတ်ပြောင်းလဲရန်</button>
+                                </form>
+                            </div>
+                            
+                            <div class="settings-card danger-zone">
+                                <h3>အန္တရာယ်ရှိသောနေရာ</h3>
+                                <p>ဤလုပ်ဆောင်ချက်များကို ပြန်လည်ရယူ၍မရပါ</p>
+                                
+                                <div class="danger-actions">
+                                    <button class="btn btn-danger" id="deleteAccount">
+                                        <i class="fas fa-trash"></i>
+                                        အကောင့်ဖျက်ရန်
+                                    </button>
+                                    
+                                    <button class="btn btn-danger-outline" id="exportData">
+                                        <i class="fas fa-download"></i>
+                                        အချက်အလက်များထုတ်ယူရန်
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Preferences Settings -->
+                        <div class="settings-section" id="preferences-section">
+                            <h2>စိတ်ကြိုက်ဆက်တင်များ</h2>
+                            
+                            <div class="settings-card">
+                                <h3>အပြင်အဆင်ဆိုင်ရာ</h3>
+                                <form class="settings-form">
+                                    <div class="form-group">
+                                        <label for="theme">အပြင်အဆင်ပုံစံ</label>
+                                        <select id="theme">
+                                            <option value="light">အလင်းပုံစံ</option>
+                                            <option value="dark">အမှောင်ပုံစံ</option>
+                                            <option value="auto">စက်ပစ္စည်းနှင့်အညီ</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="fontSize">စာလုံးအရွယ်အစား</label>
+                                        <select id="fontSize">
+                                            <option value="small">သေး</option>
+                                            <option value="medium" selected>ပျမ်းမျှ</option>
+                                            <option value="large">ကြီး</option>
+                                            <option value="x-large">အကြီးဆုံး</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label class="checkbox-container">
+                                            <input type="checkbox" id="reduceMotion" checked>
+                                            <span class="checkmark"></span>
+                                            လှုပ်ရှားမှုလျှော့ချခြင်း
+                                        </label>
+                                        <p class="setting-description">ဤဆက်တင်သည် animation များကို လျှော့ချပေးပါမည်</p>
+                                    </div>
+                                    
+                                    <button type="submit" class="btn btn-primary">ဆက်တင်များသိမ်းဆည်းရန်</button>
+                                </form>
+                            </div>
+                            
+                            <div class="settings-card">
+                                <h3>AI ဆက်တင်များ</h3>
+                                <form class="settings-form">
+                                    <div class="form-group">
+                                        <label for="aiStyle">AI တုံ့ပြန်မှုပုံစံ</label>
+                                        <select id="aiStyle">
+                                            <option value="professional">Professional</option>
+                                            <option value="friendly" selected>ဖော်ရွေသော</option>
+                                            <option value="technical">နည်းပညာဆန်သော</option>
+                                            <option value="creative">ဖန်တီးနိုင်သော</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="responseLength">တုံ့ပြန်မှုအရှည်</label>
+                                        <select id="responseLength">
+                                            <option value="short">တိုတောင်းသော</option>
+                                            <option value="medium" selected>ပျမ်းမျှ</option>
+                                            <option value="long">ရှည်လျားသော</option>
+                                            <option value="detailed">အသေးစိတ်</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label class="checkbox-container">
+                                            <input type="checkbox" id="autoExpand" checked>
+                                            <span class="checkmark"></span>
+                                            ဆွေးနွေးခန်းများကို အလိုအလျောက်ချဲ့ထွင်ခြင်း
+                                        </label>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label class="checkbox-container">
+                                            <input type="checkbox" id="suggestions" checked>
+                                            <span class="checkmark"></span>
+                                            အကြံပြုချက်များပြသခြင်း
+                                        </label>
+                                    </div>
+                                    
+                                    <button type="submit" class="btn btn-primary">ဆက်တင်များသိမ်းဆည်းရန်</button>
+                                </form>
+                            </div>
+                        </div>
+
+                        <!-- Other settings sections would follow a similar pattern -->
+                        
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../js/loader_effect.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/setting.js"></script>
+</body>
+</html>
