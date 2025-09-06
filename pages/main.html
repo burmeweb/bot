@@ -30,180 +30,217 @@
         <div class="shape shape-4"></div>
     </div>
 
-    <!-- Main Layout -->
-    <div class="app-container">
-        <!-- Side Navigation -->
-        <nav class="side-nav" id="sideNav">
-            <div class="nav-header">
-                <div class="logo">
-                    <img src="../assets/logo.png" alt="Burme Mark AI">
-                    <span class="logo-text">Burme Mark AI</span>
-                </div>
-                <button class="nav-toggle" id="navToggle">
-                    <i class="fas fa-bars"></i>
-                </button>
+    <!-- Header with Auth Buttons -->
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo-section">
+                <img src="../assets/logo.png" alt="Burme Mark AI" class="header-logo">
+                <span class="header-title">Burme Mark AI</span>
             </div>
-
-            <div class="nav-content">
-                <div class="nav-user">
-                    <div class="user-avatar">
-                        <img src="../assets/user.png" alt="User">
-                    </div>
-                    <div class="user-info">
-                        <div class="user-name">ဧဝါချို</div>
-                        <div class="user-status">အဆင့်မြင့် အသုံးပြုသူ</div>
-                    </div>
-                </div>
-
-                <ul class="nav-menu">
-                    <li class="nav-item active">
-                        <a href="../pages/main.html">
-                            <i class="fas fa-home"></i>
-                            <span class="nav-text">ပင်မစာမျက်နှာ</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="../pages/dashboard.html">
-                            <i class="fas fa-chart-line"></i>
-                            <span class="nav-text">ပုံမှန်အချက်အလက်</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="../pages/history_view.html">
-                            <i class="fas fa-history"></i>
-                            <span class="nav-text">မှတ်တမ်း</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="../pages/docs.html">
-                            <i class="fas fa-book"></i>
-                            <span class="nav-text">စာရွက်စာတမ်းများ</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="../pages/setting.html">
-                            <i class="fas fa-cog"></i>
-                            <span class="nav-text">ဆက်တင်များ</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="../pages/about.html">
-                            <i class="fas fa-info-circle"></i>
-                            <span class="nav-text">ကျွန်ုပ်တို့အကြောင်း</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="nav-footer">
-                <a href="../user/login.html" class="logout-btn">
-                    <i class="fas fa-sign-out-alt"></i>
-                    <span class="nav-text">ထွက်မည်</span>
+            
+            <div class="header-actions">
+                <!-- Settings Button -->
+                <a href="../pages/setting.html" class="header-btn">
+                    <i class="fas fa-cog"></i>
+                    <span class="btn-text">ဆက်တင်များ</span>
+                </a>
+                
+                <!-- Login Button -->
+                <a href="../user/login.html" class="header-btn login-btn">
+                    <i class="fas fa-sign-in-alt"></i>
+                    <span class="btn-text">လော့ဂ်အင်</span>
+                </a>
+                
+                <!-- Register Button -->
+                <a href="../user/register.html" class="header-btn register-btn">
+                    <i class="fas fa-user-plus"></i>
+                    <span class="btn-text">မှတ်ပုံတင်ရန်</span>
                 </a>
             </div>
-        </nav>
+        </div>
+    </header>
 
-        <!-- Main Content -->
-        <main class="main-content">
-            <div class="content-header">
-                <h1>Burme Mark AI မှ ကြိုဆိုပါတယ်</h1>
-                <p>မြန်မာဘာသာဖြင့် အဆင့်မြင့် AI အကူအညီ</p>
-            </div>
-
-            <div class="content-body">
-                <!-- AI Chat Interface -->
-                <div class="ai-chat-container">
-                    <div class="chat-header">
-                        <div class="ai-info">
-                            <div class="ai-avatar">
-                                <img src="../assets/icon.gif" alt="Burme Mark AI">
-                            </div>
-                            <div class="ai-details">
-                                <h3>Burme Mark AI</h3>
-                                <div class="status online">အွန်လိုင်း</div>
-                            </div>
-                        </div>
-                        <div class="chat-actions">
-                            <button class="action-btn" title="အသံဖွင့်ရန်">
-                                <i class="fas fa-volume-up"></i>
-                            </button>
-                            <button class="action-btn" title="အသံပိတ်ရန်">
-                                <i class="fas fa-volume-mute"></i>
-                            </button>
-                            <button class="action-btn" title="ရှင်းလင်းရန်">
-                                <i class="fas fa-trash"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="chat-messages" id="chatMessages">
-                        <div class="message ai-message">
-                            <div class="message-content">
-                                <div class="message-text">မင်္ဂလာပါ! ကျွန်တော့်ကို Burme Mark AI လို့ခေါ်တယ်။ ဘယ်လိုအကူအညီတွေလိုအပ်လဲ?</div>
-                                <div class="message-time">ယနေ့ 10:30 AM</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="chat-input-container">
-                        <div class="typing-indicator" id="typingIndicator">
-                            <div class="typing-dots">
-                                <div class="dot"></div>
-                                <div class="dot"></div>
-                                <div class="dot"></div>
-                            </div>
-                            <span>Burme Mark AI is typing...</span>
-                        </div>
-                        <div class="input-group">
-                            <input type="text" id="messageInput" placeholder="မက်ဆေ့ချ်ရိုက်ထည့်ပါ...">
-                            <button id="sendMessage" class="send-btn">
-                                <i class="fas fa-paper-plane"></i>
-                            </button>
-                        </div>
-                    </div>
+    <!-- Main Content -->
+    <div class="main-container">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">Burme Mark AI မှ ကြိုဆိုပါတယ်</h1>
+                <p class="hero-description">မြန်မာဘာသာဖြင့် အဆင့်မြင့် AI အကူအညီ</p>
+                
+                <div class="hero-actions">
+                    <a href="#features" class="cta-btn primary">
+                        <i class="fas fa-play"></i>
+                        စတင်အသုံးပြုရန်
+                    </a>
+                    <a href="#demo" class="cta-btn secondary">
+                        <i class="fas fa-eye"></i>
+                        နမူနာကြည့်ရန်
+                    </a>
                 </div>
+            </div>
+            
+            <div class="hero-visual">
+                <img src="../assets/ai-hero.png" alt="AI Assistant" class="hero-image">
+            </div>
+        </section>
 
-                <!-- Quick Actions -->
-                <div class="quick-actions">
-                    <h2>အမြန်လုပ်ဆောင်ချက်များ</h2>
-                    <div class="action-grid">
-                        <div class="action-card">
-                            <div class="action-icon">
-                                <i class="fas fa-lightbulb"></i>
-                            </div>
-                            <h3>အကြံဉာဏ်ရယူပါ</h3>
-                            <p>လက်ရှိလုပ်ဆောင်နေမှုအတွက် အကြံဉာဏ်များ</p>
-                        </div>
-                        <div class="action-card">
-                            <div class="action-icon">
-                                <i class="fas fa-language"></i>
-                            </div>
-                            <h3>ဘာသာပြန်ဆိုရန်</h3>
-                            <p>စာသားများကို ဘာသာစကားအမျိုးမျိုးသို့ ပြန်ဆိုပေးခြင်း</p>
-                        </div>
-                        <div class="action-card">
-                            <div class="action-icon">
-                                <i class="fas fa-file-alt"></i>
-                            </div>
-                            <h3>စာတမ်းရေးသားရန်</h3>
-                            <p>စာတမ်း၊ အစီရင်ခံစာများ ရေးသားရန်</p>
-                        </div>
-                        <div class="action-card">
-                            <div class="action-icon">
-                                <i class="fas fa-robot"></i>
-                            </div>
-                            <h3>ကုဒ်ရေးသားရန်</h3>
-                            <p> programming ကုဒ်များ ရေးသားရန်</p>
-                        </div>
+        <!-- Features Section -->
+        <section id="features" class="features-section">
+            <h2 class="section-title">ကျွန်ုပ်တို့၏ဝန်ဆောင်မှုများ</h2>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>စကားပြောအကူအညီ</h3>
+                    <p>မြန်မာဘာသာဖြင့် မေးခွန်းများမေးမြန်းနိုင်ပါသည်</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>ကုဒ်ရေးသားခြင်း</h3>
+                    <p>Programming ကုဒ်များကို အလိုအလျောက်ရေးသားပေးခြင်း</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-image"></i>
+                    </div>
+                    <h3>ပုံများဖန်တီးခြင်း</h3>
+                    <p>AI ဖြင့် စိတ်ကူးရှိရာ ပုံများကို ဖန်တီးနိုင်ပါသည်</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <h3>ဘာသာပြန်ဆိုခြင်း</h3>
+                    <p>စာသားများကို ဘာသာစကားအမျိုးမျိုးသို့ ပြန်ဆိုပေးခြင်း</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Demo Section -->
+        <section id="demo" class="demo-section">
+            <h2 class="section-title">နမူနာကြည့်ရှုရန်</h2>
+            
+            <div class="demo-container">
+                <div class="demo-card">
+                    <div class="demo-header">
+                        <i class="fas fa-robot"></i>
+                        <h3>စမ်းသပ်ကြည့်ရှုရန်</h3>
+                    </div>
+                    <div class="demo-content">
+                        <p>အောက်ပါ button ကိုနှိပ်ပြီး AI ၏စွမ်းရည်ကို စမ်းသပ်ကြည့်ရှုနိုင်ပါသည်</p>
+                        <button class="demo-btn" onclick="showDemoMessage()">
+                            <i class="fas fa-play-circle"></i>
+                            နမူနာစမ်းကြည့်ရန်
+                        </button>
                     </div>
                 </div>
             </div>
-        </main>
+        </section>
+
+        <!-- Auth Call to Action -->
+        <section class="auth-section">
+            <div class="auth-content">
+                <h2>စတင်အသုံးပြုရန်</h2>
+                <p>အပြည့်အစုံအသုံးပြုနိုင်ရန် အကောင့်ဝင်ရောက်ပါ သို့မဟုတ် မှတ်ပုံတင်ပါ</p>
+                
+                <div class="auth-buttons">
+                    <a href="../user/login.html" class="auth-btn login">
+                        <i class="fas fa-sign-in-alt"></i>
+                        လော့ဂ်အင်
+                    </a>
+                    <a href="../user/register.html" class="auth-btn register">
+                        <i class="fas fa-user-plus"></i>
+                        မှတ်ပုံတင်ရန်
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <img src="../assets/logo.png" alt="Burme Mark AI" class="footer-logo">
+                <p>မြန်မာ့ဉာဏ်ရည်တု AI စနစ်</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>ဆက်သွယ်ရန်</h4>
+                <p>အီးမေးလ်: info@burmemark.com</p>
+                <p>ဖုန်း: +95 9 123 456 789</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>လင့်ခ်များ</h4>
+                <a href="../pages/about.html">ကျွန်ုပ်တို့အကြောင်း</a>
+                <a href="../pages/docs.html">စာရွက်စာတမ်းများ</a>
+                <a href="../pages/setting.html">ဆက်တင်များ</a>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 Burme Mark AI. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Demo Message Modal -->
+    <div class="modal" id="demoModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>နမူနာပြသခြင်း</h3>
+                <span class="close" onclick="closeModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="demo-message ai-message">
+                    <div class="message-avatar">
+                        <img src="../assets/icon.gif" alt="AI Avatar">
+                    </div>
+                    <div class="message-content">
+                        <p>မင်္ဂလာပါ! ကျွန်တော်က Burme Mark AI ပါ။ ဘယ်လိုအကူအညီလိုအပ်လဲ? ကျွန်တော်က စကားပြောဆိုခြင်း၊ ကုဒ်ရေးသားခြင်း၊ ပုံများဖန်တီးခြင်းနဲ့ ဘာသာပြန်ဆိုခြင်းတွေ လုပ်ဆောင်ပေးနိုင်ပါတယ်။</p>
+                    </div>
+                </div>
+                <div class="modal-actions">
+                    <button class="modal-btn" onclick="closeModal()">
+                        နားလည်ပါပြီ
+                    </button>
+                    <a href="../user/register.html" class="modal-btn primary">
+                        စတင်အသုံးပြုရန်
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Scripts -->
     <script src="../js/loader_effect.js"></script>
     <script src="../js/main.js"></script>
-    <script src="../js/button.js"></script>
+    
+    <script>
+        // Demo functionality
+        function showDemoMessage() {
+            document.getElementById('demoModal').style.display = 'block';
+        }
+        
+        function closeModal() {
+            document.getElementById('demoModal').style.display = 'none';
+        }
+        
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('demoModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+    </script>
 </body>
 </html>
