@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>စာရွက်စာတမ်းများ - Burme Mark AI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/update.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loader">
+        <div class="loader-content">
+            <img src="../assets/loader.svg" alt="Loading" class="loader-icon">
+            <div class="loading-text">တင်ဆောင်နေသည်...</div>
+        </div>
+    </div>
+
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+    </div>
+
+    <!-- Main Layout -->
+    <div class="app-container">
+        <!-- Side Navigation -->
+        <nav class="side-nav" id="sideNav">
+            <!-- Navigation content same as index.html -->
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="content-header">
+                <h1>စာရွက်စာတမ်းများ</h1>
+                <p>Burme Mark AI ကို အသုံးပြုနည်းလမ်းညွှန်များ</p>
+            </div>
+
+            <div class="content-body">
+                <!-- Documentation Navigation -->
+                <div class="docs-navigation">
+                    <div class="docs-search">
+                        <input type="text" placeholder="စာရွက်စာတမ်းများအား ရှာဖွေရန်..." id="docsSearch">
+                        <button class="search-btn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+
+                    <div class="docs-categories">
+                        <button class="category-btn active" data-category="all">အားလုံး</button>
+                        <button class="category-btn" data-category="getting-started">စတင်အသုံးပြုခြင်း</button>
+                        <button class="category-btn" data-category="features">လုပ်ဆောင်ချက်များ</button>
+                        <button class="category-btn" data-category="tutorials">သင်ခန်းစာများ</button>
+                        <button class="category-btn" data-category="troubleshooting">ပြဿနာဖြေရှင်းခြင်း</button>
+                    </div>
+                </div>
+
+                <!-- Documentation Content -->
+                <div class="docs-content">
+                    <div class="docs-sidebar">
+                        <h3>အကြောင်းအရာများ</h3>
+                        <ul class="docs-menu">
+                            <li class="menu-item active">
+                                <a href="#introduction">မိတ်ဆက်</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#quick-start">အမြန်စတင်လမ်းညွှန်</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#chat-features">စကားပြောခန်းလုပ်ဆောင်ချက်များ</a>
+                                <ul class="submenu">
+                                    <li><a href="#basic-chat">အခြေခံစကားပြောခန်း</a></li>
+                                    <li><a href="#voice-chat">အသံစကားပြောခန်း</a></li>
+                                    <li><a href="#file-upload">ဖိုင်များတင်ခြင်း</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#translation">ဘာသာပြန်ဆိုခြင်း</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#code-generation">ကုဒ်ရေးသားခြင်း</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#document-creation">စာတမ်းရေးသားခြင်း</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#settings">ဆက်တင်များ</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#faq">အမေးများသောမေးခွန်းများ</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="docs-main">
+                        <article class="docs-article" id="introduction">
+                            <h2>Burme Mark AI ကို ကြိုဆိုပါတယ်</h2>
+                            <p>Burme Mark AI သည် မြန်မာဘာသာဖြင့် အဆင့်မြင့် AI အကူအညီပေးသော ပလက်ဖောင်းတစ်ခုဖြစ်ပါသည်။ ကျွန်ုပ်တို့၏ AI သည် သင့်အား နေ့စဉ်လုပ်ငန်းဆောင်တာများတွင် အထောက်အကူပြုရန် ဒီဇိုင်းထုတ်ထားပါသည်။</p>
+
+                            <h3>အဓိကလုပ်ဆောင်ချက်များ</h3>
+                            <ul>
+                                <li>စကားပြောခန်းများဖြင့် သဘာဝဘာသာစကားဆက်သွယ်ခြင်း</li>
+                                <li>ဘာသာစကားမျိုးစုံသို့ ဘာသာပြန်ဆိုခြင်း</li>
+                                <li>Programming ကုဒ်များရေးသားခြင်း</li>
+                                <li>စာတမ်းများ၊ အစီရင်ခံစာများရေးသားခြင်း</li>
+                                <li>အကြံဉာဏ်များနှင့် ဖန်တီးမှုဆိုင်ရာအကူအညီများ</li>
+                            </ul>
+                        </article>
+
+                        <article class="docs-article" id="quick-start">
+                            <h2>အမြန်စတင်လမ်းညွှန်</h2>
+                            <p>Burme Mark AI ကို စတင်အသုံးပြုရန် လွယ်ကူသောအဆင့်များ။</p>
+
+                            <h3>အကောင့်ဖွင့်ရန်</h3>
+                            <ol>
+                                <li><a href="../user/register.html">အကောင့်အသစ်ဖွင့်ရန်</a> သို့သွားပါ</li>
+                                <li>သင့်အီးမေးလ်နှင့် လျှို့ဝှက်နံပါတ်ထည့်ပါ</li>
+                                <li>အတည်ပြုလင့်ခ်အား သင့်အီးမေးလ်တွင် စစ်ဆေးပါ</li>
+                                <li>အကောင့်အား အတည်ပြုပြီး ဝင်ရောက်အသုံးပြုပါ</li>
+                            </ol>
+
+                            <h3>ပထမဆုံးစကားပြောခန်း</h3>
+                            <p>ဝင်ရောက်ပြီးနောက် ပင်မစာမျက်နှာရှိ စကားပြောခန်းသို့သွားပါ။ အောက်ပါတို့ကို စမ်းသပ်မေးမြန်းနိုင်ပါသည် -</p>
+                            
+                            <div class="code-example">
+                                <p>"မင်္ဂလာပါ၊ ကျေးဇူးပြု၍ ကျွန်တော့်ကို ကူညီပေးပါ"</p>
+                                <p>"Python ဖြင့် data analysis code ရေးပေးပါ"</p>
+                                <p>"ဤစာသားကို အင်္ဂလိပ်ဘာသာသို့ ပြန်ပေးပါ"</p>
+                            </div>
+                        </article>
+
+                        <article class="docs-article" id="chat-features">
+                            <h2>စကားပြောခန်းလုပ်ဆောင်ချက်များ</h2>
+                            <p>ကျွန်ုပ်တို့၏ AI စကားပြောခန်းသည် ခေတ်မီသော လုပ်ဆောင်ချက်များစွာဖြင့် ပြည့်စုံပါသည်။</p>
+
+                            <h3 id="basic-chat">အခြေခံစကားပြောခန်း</h3>
+                            <p>စာသားဖြင့် သဘာဝအတိုင်းဆက်သွယ်နိုင်ပါသည်။ AI သည် သင့်မေးခွန်းများကို နားလည်ပြီး သင့်တော်သောအဖြေများပေးပါမည်။</p>
+
+                            <h3 id="voice-chat">အသံစကားပြောခန်း</h3>
+                            <p>မီးခတ်ခလုတ်ကိုနှိပ်၍ အသံဖြင့်မေးမြန်းနိုင်ပါသည်။ AI သည် သင့်အသံကိုနားထောင်ပြီး စာသားအဖြစ်ပြောင်းလဲကာ အဖြေပေးပါမည်။</p>
+
+                            <h3 id="file-upload">ဖိုင်များတင်ခြင်း</h3>
+                            <p>PDF, Word, Excel နှင့် image ဖိုင်များကိုတင်ကာ အကြောင်းအရာများကို ဆွေးနွေးနိုင်ပါသည်။</p>
+                        </article>
+
+                        <!-- More documentation articles would follow -->
+
+                        <div class="docs-feedback">
+                            <h3>ဤစာရွက်စာတမ်းသည် အကူအညီဖြစ်ပါသလား?</h3>
+                            <div class="feedback-buttons">
+                                <button class="feedback-btn yes-btn">
+                                    <i class="fas fa-thumbs-up"></i>
+                                    ဟုတ်ကဲ့
+                                </button>
+                                <button class="feedback-btn no-btn">
+                                    <i class="fas fa-thumbs-down"></i>
+                                    မဟုတ်ပါ
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../js/loader_effect.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/docs.js"></script>
+</body>
+</html>
