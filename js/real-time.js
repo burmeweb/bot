@@ -7,9 +7,8 @@ const realTimeChat = {
     
     setupPusher: function() {
         // Pusher configuration
-        this.pusher = new Pusher('', {
+        this.pusher = new Pusher('acb4c45202e622c0a0db', {
         app_id = "2046604" 
-        key = "acb4c45202e622c0a0db"
         secret = "a30b0eb577d698f73456"
         cluster = "ap1"
         });
