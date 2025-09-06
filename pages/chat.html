@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burme Mark AI - Chat</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/chat.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+    </div>
+
+    <!-- Header with Navigation -->
+    <header class="chat-header">
+        <div class="header-container">
+            <div class="header-left">
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="logo-section">
+                    <img src="../assets/logo.png" alt="Burme Mark AI" class="header-logo">
+                    <span class="header-title">Burme Mark AI</span>
+                </div>
+            </div>
+            
+            <div class="header-center">
+                <nav class="main-nav">
+                    <a href="#chat" class="nav-btn active" data-type="chat">
+                        <i class="fas fa-comments"></i>
+                        <span class="nav-text">စကားပြောရန်</span>
+                    </a>
+                    <a href="#text" class="nav-btn" data-type="text">
+                        <i class="fas fa-file-alt"></i>
+                        <span class="nav-text">စာသား</span>
+                    </a>
+                    <a href="#image" class="nav-btn" data-type="image">
+                        <i class="fas fa-image"></i>
+                        <span class="nav-text">ပုံများ</span>
+                    </a>
+                    <a href="#coder" class="nav-btn" data-type="coder">
+                        <i class="fas fa-code"></i>
+                        <span class="nav-text">ကုဒ်</span>
+                    </a>
+                </nav>
+            </div>
+            
+            <div class="header-right">
+                <button class="new-chat-btn" id="newChatBtn">
+                    <i class="fas fa-plus"></i>
+                    <span class="btn-text">အသစ်</span>
+                </button>
+                <a href="../pages/setting.html" class="settings-btn">
+                    <i class="fas fa-cog"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Chat Container -->
+    <div class="chat-app-container">
+        <!-- Sidebar for Desktop -->
+        <aside class="chat-sidebar" id="chatSidebar">
+            <div class="sidebar-header">
+                <h3>စကားပြောခန်းများ</h3>
+                <button class="close-sidebar" id="closeSidebar">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="chat-history">
+                <div class="history-item active">
+                    <i class="fas fa-comment"></i>
+                    <span>လက်ရှိစကားပြောခန်း</span>
+                </div>
+                <div class="history-item">
+                    <i class="fas fa-comment"></i>
+                    <span>Programming မေးခွန်းများ</span>
+                </div>
+                <div class="history-item">
+                    <i class="fas fa-comment"></i>
+                    <span>ဘာသာပြန်ဆိုမှုများ</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Chat Area -->
+        <main class="chat-main">
+            <!-- Chat Interface -->
+            <div class="chat-interface active" id="chatTab">
+                <div class="chat-messages" id="chatMessages">
+                    <div class="message ai-message">
+                        <div class="message-avatar">
+                            <img src="../assets/ai-avatar.png" alt="AI Avatar">
+                        </div>
+                        <div class="message-content">
+                            <div class="message-text">မင်္ဂလာပါ! ကျွန်တော့်ကို Burme Mark AI လို့ခေါ်တယ်။ ဘယ်လိုအကူအညီတွေလိုအပ်လဲ?</div>
+                            <div class="message-time">ယနေ့ 10:30 AM</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chat-input-container">
+                    <div class="input-actions">
+                        <button class="action-btn voice-btn" title="အသံဖြင့်ပြောရန်">
+                            <i class="fas fa-microphone"></i>
+                        </button>
+                        <button class="action-btn image-btn" title="ပုံတင်ရန်">
+                            <i class="fas fa-image"></i>
+                        </button>
+                        <button class="action-btn file-btn" title="ဖိုင်တင်ရန်">
+                            <i class="fas fa-paperclip"></i>
+                        </button>
+                        <button class="action-btn camera-btn" title="ကင်မရာ">
+                            <i class="fas fa-camera"></i>
+                        </button>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="messageInput" placeholder="မက်ဆေ့ချ်ရိုက်ထည့်ပါ...">
+                        <button id="sendMessage" class="send-btn">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Text Generation Interface -->
+            <div class="text-interface" id="textTab">
+                <div class="text-header">
+                    <h3>စာသားများ ဖန်တီးရန်</h3>
+                    <p>စာသား၊ စာတမ်း၊ ကဗျာများ ဖန်တီးနိုင်ပါသည်</p>
+                </div>
+                <div class="text-controls">
+                    <select id="textStyle">
+                        <option value="general">သာမန်စာသား</option>
+                        <option value="formal">တရားဝင်စာသား</option>
+                        <option value="casual">ချစ်စနိုးစာသား</option>
+                        <option value="poem">ကဗျာ</option>
+                        <option value="story">ပုံပြင်</option>
+                    </select>
+                    <input type="number" id="textLength" min="50" max="1000" value="200" placeholder="စာလုံးရေ">
+                </div>
+                <div class="text-area">
+                    <textarea id="textPrompt" placeholder="စာသားဖန်တီးရန် prompt ရိုက်ထည့်ပါ..."></textarea>
+                    <button class="generate-btn" id="generateText">
+                        <i class="fas fa-magic"></i>
+                        စာသားဖန်တီးရန်
+                    </button>
+                </div>
+                <div class="text-output" id="textOutput"></div>
+            </div>
+
+            <!-- Image Generation Interface -->
+            <div class="image-interface" id="imageTab">
+                <div class="image-header">
+                    <h3>ပုံများ ဖန်တီးရန်</h3>
+                    <p>AI ဖြင့် စိတ်ကူးရှိရာ ပုံများ ဖန်တီးနိုင်ပါသည်</p>
+                </div>
+                <div class="image-controls">
+                    <select id="imageStyle">
+                        <option value="realistic">လက်တွေ့ဆန်သော</option>
+                        <option value="artistic">အနုပညာဆန်သော</option>
+                        <option value="cartoon">ကာတွန်းပုံစံ</option>
+                        <option value="abstract">ယေဘုယျ</option>
+                    </select>
+                    <select id="imageSize">
+                        <option value="1024x1024">1024x1024</option>
+                        <option value="1024x1792">1024x1792</option>
+                        <option value="1792x1024">1792x1024</option>
+                    </select>
+                </div>
+                <div class="image-input">
+                    <textarea id="imagePrompt" placeholder="ပုံဖန်တီးရန် prompt ရိုက်ထည့်ပါ..."></textarea>
+                    <button class="generate-btn" id="generateImage">
+                        <i class="fas fa-paint-brush"></i>
+                        ပုံဖန်တီးရန်
+                    </button>
+                </div>
+                <div class="image-output" id="imageOutput">
+                    <div class="upload-area" id="imageUploadArea">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <p>ပုံအားဆွဲထည့်ရန် သို့မဟုတ် နှိပ်ပါ</p>
+                        <input type="file" id="imageUpload" accept="image/*" hidden>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Coder Interface -->
+            <div class="coder-interface" id="coderTab">
+                <div class="coder-header">
+                    <h3>ကုဒ်များ ရေးသားရန်</h3>
+                    <p>Programming ကုဒ်များ ရေးသားနိုင်ပါသည်</p>
+                </div>
+                <div class="coder-controls">
+                    <select id="codeLanguage">
+                        <option value="javascript">JavaScript</option>
+                        <option value="python">Python</option>
+                        <option value="html">HTML/CSS</option>
+                        <option value="java">Java</option>
+                        <option value="php">PHP</option>
+                        <option value="csharp">C#</option>
+                    </select>
+                    <button class="run-btn" id="runCode">
+                        <i class="fas fa-play"></i>
+                        ကုဒ်စမ်းရန်
+                    </button>
+                </div>
+                <div class="coder-container">
+                    <div class="code-editor">
+                        <div class="editor-header">
+                            <span>ကုဒ်ရေးသားရန်</span>
+                            <button class="copy-btn" id="copyCode">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                        <textarea id="codeInput" placeholder="ကုဒ်ရေးသားရန် prompt ရိုက်ထည့်ပါ..."></textarea>
+                        <button class="generate-btn" id="generateCode">
+                            <i class="fas fa-code"></i>
+                            ကုဒ်ရေးသားရန်
+                        </button>
+                    </div>
+                    <div class="code-preview">
+                        <div class="preview-header">
+                            <span>ရ效果 preview</span>
+                            <button class="refresh-btn" id="refreshPreview">
+                                <i class="fas fa-sync-alt"></i>
+                            </button>
+                        </div>
+                        <iframe id="previewFrame"></iframe>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Voice Recognition Modal -->
+    <div class="modal" id="voiceModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>အသံဖြင့်ပြောရန်</h3>
+                <span class="close" onclick="closeModal('voiceModal')">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="voice-recorder">
+                    <div class="voice-visualizer">
+                        <div class="visualizer-bar"></div>
+                        <div class="visualizer-bar"></div>
+                        <div class="visualizer-bar"></div>
+                        <div class="visualizer-bar"></div>
+                        <div class="visualizer-bar"></div>
+                    </div>
+                    <button class="record-btn" id="recordBtn">
+                        <i class="fas fa-microphone"></i>
+                        <span>စဖမ်းရန်</span>
+                    </button>
+                    <p class="recording-status">မှတ်တမ်းတင်ခြင်း မစတင်ရသေးပါ</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../js/main.js"></script>
+    <script src="../js/chat.js"></script>
+</body>
+                  </html>
