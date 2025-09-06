@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>အကောင့်အသစ်ဖွင့်ရန် - Burme Mark AI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/update.css">
+    <link rel="stylesheet" href="css/user.css">
+</head>
+<body class="auth-page">
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+
+    <div class="auth-container">
+        <div class="auth-card">
+            <div class="auth-header">
+                <div class="logo">
+                    <img src="../assets/logo.png" alt="Burme Mark AI">
+                    <h1>Burme Mark AI</h1>
+                </div>
+                <h2>အကောင့်အသစ်ဖွင့်ရန်</h2>
+                <p>ကျေးဇူးပြု၍ သင့်အချက်အလက်များ ဖြည့်သွင်းပါ</p>
+            </div>
+
+            <form class="auth-form" id="registerForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">အမည်၏အရှေ့ဆုံးစာလုံး</label>
+                        <input type="text" id="firstName" name="firstName" placeholder="ဥပမာ - ကိုကို" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">အမည်၏နောက်ဆုံးစာလုံး</label>
+                        <input type="text" id="lastName" name="lastName" placeholder="ဥပမာ - ထွန်း" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">အီးမေးလ်</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="email" name="email" placeholder="သင့်အီးမေးလ် ထည့်ပါ" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="username">အသုံးပြုသူအမည်</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="username" name="username" placeholder="အသုံးပြုသူအမည် ထည့်ပါ" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">လျှို့ဝှက်နံပါတ်</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="password" name="password" placeholder="လျှို့ဝှက်နံပါတ် ထည့်ပါ" required>
+                        <button type="button" class="toggle-password" id="togglePassword">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                    <div class="password-strength">
+                        <div class="strength-bar">
+                            <div class="strength-fill" id="passwordStrength"></div>
+                        </div>
+                        <div class="strength-text" id="passwordStrengthText">လျှို့ဝှက်နံပါတ် အားနည်းနေပါသည်</div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPassword">လျှို့ဝှက်နံပါတ် ထပ်မံအတည်ပြုရန်</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="လျှို့ဝှက်နံပါတ် ထပ်မံရိုက်ထည့်ပါ" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <span class="checkmark"></span>
+                        ကျွန်ုပ်သည် <a href="../pages/docs.html" target="_blank">ဝန်ဆောင်မှုစည်းမျဉ်းများ</a> နှင့် 
+                        <a href="../pages/docs.html" target="_blank">ကိုယ်ရေးကိုယ်တာမူဝါဒ</a> ကိုဖတ်ရှုပြီး သဘောတူပါသည်။
+                    </label>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-full">အကောင့်အသစ်ဖွင့်ရန်</button>
+
+                <div class="auth-divider">
+                    <span>သို့မဟုတ်</span>
+                </div>
+
+                <div class="social-login">
+                    <button type="button" class="btn btn-google">
+                        <i class="fab fa-google"></i>
+                        Google ဖြင့် ဆက်သွယ်ဝင်ရောက်ပါ
+                    </button>
+                    <button type="button" class="btn btn-facebook">
+                        <i class="fab fa-facebook-f"></i>
+                        Facebook ဖြင့် ဆက်သွယ်ဝင်ရောက်ပါ
+                    </button>
+                </div>
+
+                <div class="auth-footer">
+                    <p>အကောင့်ရှိပြီးသားလား? <a href="login.html">အကောင့်ဝင်ရန်</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="../js/loader_effect.js"></script>
+    <script src="../js/auth.js"></script>
+</body>
+                          </html>
