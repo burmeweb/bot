@@ -14,7 +14,7 @@ const realTimeChat = {
         cluster = "ap1"
         });
         
-        this.channel = this.pusher.subscribe('burmemarkai-chat');
+        this.channel = this.pusher.subscribe('Aung Myo Kyaw -deployment');
     },
     
     bindEvents: function() {
