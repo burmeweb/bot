@@ -5,64 +5,89 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sandbox Loader</title>
   <style>
-   @import url(https://fonts.googleapis.com/css?family=Open+Sans:300);
+    @import url('https://fonts.googleapis.com/css?family=Open+Sans:300');
 
-.inner {
-  position: absolute; 
-  margin: auto; 
-  width: 50px; 
-  height: 95px; 
-  top: 0px; 
-  left: 0px; 
-  bottom: 0px; 
-  right: 0px; 
-}
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background: #111;
+      font-family: 'Open Sans', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-.inner > div {
-  width: 50px; 
-  height: 50px; 
-  background-color: rgba(255, 255, 255, 0.7); 
-  border-radius: 100%; 
-  position: absolute; 
-  transition: all 0.5s ease; 
-}
+    .pageLoad {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+      background: #111;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 9999;
+    }
 
-.inner > div:first-child {
-  margin-left: -27px; 
-  animation: one 1.5s linear 1; 
-}
+    .inner {
+      display: flex;
+      gap: 15px;
+    }
 
-.inner > div:nth-child(2) {
-  margin-left: 27px; 
-  animation: two 1.5s linear 1; 
+    .inner div {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.7);
+      animation: bounce 1.2s infinite ease-in-out;
+    }
+
+    .inner div:nth-child(1) {
+      animation-delay: -0.32s;
+    }
+
+    .inner div:nth-child(2) {
+      animation-delay: -0.16s;
+    }
+
+    @keyframes bounce {
+      0%, 80%, 100% {
+        transform: scale(0);
+      }
+      40% {
+        transform: scale(1);
+      }
+    }
+
+    h1 {
+      color: #fff;
+      position: absolute;
+      bottom: 20px;
+      text-align: center;
+      width: 100%;
+      font-size: 16px;
+      opacity: 0.7;
+    }
   </style>
 </head>
-<body><div class="pageLoad">
-<div class="inner">
-	<div></div>
-  <div></div> 
-  <div></div>
-  <div></div>
-</div> 
-</div>
-</body>
-<h1>Creotip.io - Alex Safayan Fork </h1> 
+<body>
+  <div class="pageLoad">
+    <div class="inner">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+
+  <h1>Bueme Mark Ai</h1>
 
   <script>
+    // 2 second redirect
     setTimeout(function() {
-  $('.inner div').addClass('done'); 
-  
-  setTimeout(function() {
-    $('.inner div').addClass('page'); 
-    
-    setTimeout(function() {
-    	$('.pageLoad').addClass('off'); 
-      
-      $('body, html').addClass('on'); 
-      
-      
-  	}, 500)
-  }, 500)
-}, 1500)
+      window.location.href = "pages/main.html";
+    }, 2000);
   </script>
+</body>
 </html>
