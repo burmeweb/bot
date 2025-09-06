@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>အသုံးပြုသူအချက်အလက် - Burme Mark AI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/update_2.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+    </div>
+
+    <!-- Main Layout -->
+    <div class="app-container">
+        <!-- Side Navigation -->
+        <nav class="side-nav" id="sideNav">
+            <div class="nav-header">
+                <div class="logo">
+                    <img src="../assets/logo.png" alt="Burme Mark AI">
+                    <span class="logo-text">Burme Mark AI</span>
+                </div>
+                <button class="nav-toggle" id="navToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <div class="nav-content">
+                <div class="nav-user">
+                    <div class="user-avatar">
+                        <img src="../assets/user.png" alt="User">
+                    </div>
+                    <div class="user-info">
+                        <div class="user-name">ဧဝါချို</div>
+                        <div class="user-status">အဆင့်မြင့် အသုံးပြုသူ</div>
+                    </div>
+                </div>
+
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="main.html">
+                            <i class="fas fa-home"></i>
+                            <span class="nav-text">ပင်မစာမျက်နှာ</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="dashboard.html">
+                            <i class="fas fa-chart-line"></i>
+                            <span class="nav-text">ပုံမှန်အချက်အလက်</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="history_view.html">
+                            <i class="fas fa-history"></i>
+                            <span class="nav-text">မှတ်တမ်း</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="docs.html">
+                            <i class="fas fa-book"></i>
+                            <span class="nav-text">စာရွက်စာတမ်းများ</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="setting.html">
+                            <i class="fas fa-cog"></i>
+                            <span class="nav-text">ဆက်တင်များ</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="profile.html">
+                            <i class="fas fa-user"></i>
+                            <span class="nav-text">ပရိုဖိုင်း</span>
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="user_info.html">
+                            <i class="fas fa-info-circle"></i>
+                            <span class="nav-text">အသုံးပြုသူအချက်အလက်</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="nav-footer">
+                <a href="../user/login.html" class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span class="nav-text">ထွက်မည်</span>
+                </a>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="content-header">
+                <h1>အသုံးပြုသူအချက်အလက်</h1>
+                <p>သင့်အကောင့်၏ အသေးစိတ်အချက်အလက်များ</p>
+            </div>
+
+            <div class="content-body">
+                <div class="user-info-container">
+                    <!-- User Summary -->
+                    <div class="user-summary">
+                        <div class="summary-card">
+                            <div class="summary-icon">
+                                <i class="fas fa-user-clock"></i>
+                            </div>
+                            <div class="summary-content">
+                                <h3>အသုံးပြုသူကြာချိန်</h3>
+                                <div class="summary-value">၁၅ ရက်</div>
+                                <div class="summary-label">စုစုပေါင်းအသုံးပြုချိန်</div>
+                            </div>
+                        </div>
+
+                        <div class="summary-card">
+                            <div class="summary-icon">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <div class="summary-content">
+                                <h3>စကားပြောခန်းများ</h3>
+                                <div class="summary-value">၁၂၈</div>
+                                <div class="summary-label">စုစုပေါင်းဆွေးနွေးမှုများ</div>
+                            </div>
+                        </div>
+
+                        <div class="summary-card">
+                            <div class="summary-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="summary-content">
+                                <h3>အောင်မြင်မှုနှုန်း</h3>
+                                <div class="summary-value">၈၉%</div>
+                                <div class="summary-label">အောင်မြင်သောတုံ့ပြန်မှုများ</div>
+                            </div>
+                        </div>
+
+                        <div class="summary-card">
+                            <div class="summary-icon">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <div class="summary-content">
+                                <h3>ယနေ့အသုံးပြုမှု</h3>
+                                <div class="summary-value">၁၈</div>
+                                <div class="summary-label">ယနေ့စကားပြောခန်းများ</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Usage Statistics -->
+                    <div class="info-section">
+                        <h2>အသုံးပြုမှုစာရင်းဇယား</h2>
+                        <div class="info-card">
+                            <div class="usage-chart">
+                                <canvas id="usageChart"></canvas>
+                            </div>
+                            <div class="usage-stats">
+                                <div class="usage-stat">
+                                    <span class="stat-label">ပျမ်းမျှနေ့စဉ်အသုံးပြုမှု</span>
+                                    <span class="stat-value">၂၄ ခေါက်နှုန်း</span>
+                                </div>
+                                <div class="usage-stat">
+                                    <span class="stat-label">အမြင့်ဆုံးအသုံးပြုမှု</span>
+                                    <span class="stat-value">၅၆ ခေါက်နှုန်း</span>
+                                </div>
+                                <div class="usage-stat">
+                                    <span class="stat-label">အနိမ့်ဆုံးအသုံးပြုမှု</span>
+                                    <span class="stat-value">၈ ခေါက်နှုန်း</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Activity Breakdown -->
+                    <div class="info-section">
+                        <h2>လှုပ်ရှားမှုအမျိုးအစားခွဲခြားမှု</h2>
+                        <div class="info-card">
+                            <div class="activity-breakdown">
+                                <div class="breakdown-chart">
+                                    <canvas id="activityChart"></canvas>
+                                </div>
+                                <div class="breakdown-stats">
+                                    <div class="breakdown-item">
+                                        <div class="breakdown-color" style="background-color: #6c5ce7;"></div>
+                                        <span class="breakdown-label">စကားပြောခန်း</span>
+                                        <span class="breakdown-value">၄၅%</span>
+                                    </div>
+                                    <div class="breakdown-item">
+                                        <div class="breakdown-color" style="background-color: #a29bfe;"></div>
+                                        <span class="breakdown-label">ဘာသာပြန်ဆိုမှု</span>
+                                        <span class="breakdown-value">၂၅%</span>
+                                    </div>
+                                    <div class="breakdown-item">
+                                        <div class="breakdown-color" style="background-color: #fd79a8;"></div>
+                                        <span class="breakdown-label">ကုဒ်ရေးသားခြင်း</span>
+                                        <span class="breakdown-value">၁၅%</span>
+                                    </div>
+                                    <div class="breakdown-item">
+                                        <div class="breakdown-color" style="background-color: #00b894;"></div>
+                                        <span class="breakdown-label">စာတမ်းရေးသားခြင်း</span>
+                                        <span class="breakdown-value">၁၀%</span>
+                                    </div>
+                                    <div class="breakdown-item">
+                                        <div class="breakdown-color" style="background-color: #fdcb6e;"></div>
+                                        <span class="breakdown-label">အခြား</span>
+                                        <span class="breakdown-value">၅%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recent Activity -->
+                    <div class="info-section">
+                        <h2>မကြာသေးမီက လှုပ်ရှားမှုများ</h2>
+                        <div class="info-card">
+                            <div class="recent-activity">
+                                <div class="activity-timeline">
+                                    <div class="timeline-item">
+                                        <div class="timeline-marker"></div>
+                                        <div class="timeline-content">
+                                            <h4>Python code generation</h4>
+                                            <p>Data analysis script for sales report</p>
+                                            <span class="timeline-time">ယနေ့ 10:24 AM</span>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-marker"></div>
+                                        <div class="timeline-content">
+                                            <h4>စာသားဘာသာပြန်ဆိုမှု</h4>
+                                            <p>English to Myanmar translation</p>
+                                            <span class="timeline-time">ယနေ့ 09:45 AM</span>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-marker"></div>
+                                        <div class="timeline-content">
+                                            <h4>စာတမ်းရေးသားခြင်း</h4>
+                                            <p>Business proposal draft</p>
+                                            <span class="timeline-time">မနေ့ 03:15 PM</span>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-marker"></div>
+                                        <div class="timeline-content">
+                                            <h4>အကြံဉာဏ်ရယူခြင်း</h4>
+                                            <p>Marketing strategy suggestions</p>
+                                            <span class="timeline-time">မနေ့ 11:30 AM</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- System Information -->
+                    <div class="info-section">
+                        <h2>စနစ်အချက်အလက်</h2>
+                        <div class="info-card">
+                            <div class="system-info">
+                                <div class="system-item">
+                                    <span class="system-label">ဗားရှင်း</span>
+                                    <span class="system-value">v2.3.1</span>
+                                </div>
+                                <div class="system-item">
+                                    <span class="system-label">နောက်ဆုံးအပ်ဒိတ်</span>
+                                    <span class="system-value">၁၅ ဖေဖော်ဝါရီ ၂၀၂၃</span>
+                                </div>
+                                <div class="system-item">
+                                    <span class="system-label">ဘရောက်ဆာ</span>
+                                    <span class="system-value">Chrome 110.0</span>
+                                </div>
+                                <div class="system-item">
+                                    <span class="system-label">လည်ပတ်သည့်စနစ်</span>
+                                    <span class="system-value">Windows 11</span>
+                                </div>
+                                <div class="system-item">
+                                    <span class="system-label">ဒေတာသိုလှောင်မှု</span>
+                                    <span class="system-value">၂၅၆ MB / ၁ GB</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/user_info.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>
