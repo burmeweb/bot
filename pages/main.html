@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burme Mark AI - မြန်မာ့ဉာဏ်ရည်တု</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/update.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loader">
+        <div class="loader-content">
+            <div class="logo">
+                <img src="assets/logo.png" alt="Burme Mark AI">
+            </div>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+            <div class="loading-text">တင်ဆောင်နေသည်...</div>
+        </div>
+    </div>
+
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+    </div>
+
+    <!-- Main Layout -->
+    <div class="app-container">
+        <!-- Side Navigation -->
+        <nav class="side-nav" id="sideNav">
+            <div class="nav-header">
+                <div class="logo">
+                    <img src="assets/logo.png" alt="Burme Mark AI">
+                    <span class="logo-text">Burme Mark AI</span>
+                </div>
+                <button class="nav-toggle" id="navToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <div class="nav-content">
+                <div class="nav-user">
+                    <div class="user-avatar">
+                        <img src="assets/user.png" alt="User">
+                    </div>
+                    <div class="user-info">
+                        <div class="user-name">ဧဝါချို</div>
+                        <div class="user-status">အဆင့်မြင့် အသုံးပြုသူ</div>
+                    </div>
+                </div>
+
+                <ul class="nav-menu">
+                    <li class="nav-item active">
+                        <a href="pages/main.html">
+                            <i class="fas fa-home"></i>
+                            <span class="nav-text">ပင်မစာမျက်နှာ</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="pages/dashboard.html">
+                            <i class="fas fa-chart-line"></i>
+                            <span class="nav-text">ပုံမှန်အချက်အလက်</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="pages/history_view.html">
+                            <i class="fas fa-history"></i>
+                            <span class="nav-text">မှတ်တမ်း</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="pages/docs.html">
+                            <i class="fas fa-book"></i>
+                            <span class="nav-text">စာရွက်စာတမ်းများ</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="pages/setting.html">
+                            <i class="fas fa-cog"></i>
+                            <span class="nav-text">ဆက်တင်များ</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="pages/about.html">
+                            <i class="fas fa-info-circle"></i>
+                            <span class="nav-text">ကျွန်ုပ်တို့အကြောင်း</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="nav-footer">
+                <a href="user/login.html" class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span class="nav-text">ထွက်မည်</span>
+                </a>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="content-header">
+                <h1>Burme Mark AI မှ ကြိုဆိုပါတယ်</h1>
+                <p>မြန်မာဘာသာဖြင့် အဆင့်မြင့် AI အကူအညီ</p>
+            </div>
+
+            <div class="content-body">
+                <!-- AI Chat Interface -->
+                <div class="ai-chat-container">
+                    <div class="chat-header">
+                        <div class="ai-info">
+                            <div class="ai-avatar">
+                                <img src="assets/icon.png" alt="Burme Mark AI">
+                            </div>
+                            <div class="ai-details">
+                                <h3>Burme Mark AI</h3>
+                                <div class="status online">အွန်လိုင်း</div>
+                            </div>
+                        </div>
+                        <div class="chat-actions">
+                            <button class="action-btn" title="အသံဖွင့်ရန်">
+                                <i class="fas fa-volume-up"></i>
+                            </button>
+                            <button class="action-btn" title="အသံပိတ်ရန်">
+                                <i class="fas fa-volume-mute"></i>
+                            </button>
+                            <button class="action-btn" title="ရှင်းလင်းရန်">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="chat-messages" id="chatMessages">
+                        <div class="message ai-message">
+                            <div class="message-content">
+                                <div class="message-text">မင်္ဂလာပါ! ကျွန်တော့်ကို Burme Mark AI လို့ခေါ်တယ်။ ဘယ်လိုအကူအညီတွေလိုအပ်လဲ?</div>
+                                <div class="message-time">ယနေ့ 10:30 AM</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chat-input-container">
+                        <div class="typing-indicator" id="typingIndicator">
+                            <div class="typing-dots">
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                            </div>
+                            <span>Burme Mark AI is typing...</span>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" id="messageInput" placeholder="မက်ဆေ့ချ်ရိုက်ထည့်ပါ...">
+                            <button id="sendMessage" class="send-btn">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Actions -->
+                <div class="quick-actions">
+                    <h2>အမြန်လုပ်ဆောင်ချက်များ</h2>
+                    <div class="action-grid">
+                        <div class="action-card">
+                            <div class="action-icon">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <h3>အကြံဉာဏ်ရယူပါ</h3>
+                            <p>လက်ရှိလုပ်ဆောင်နေမှုအတွက် အကြံဉာဏ်များ</p>
+                        </div>
+                        <div class="action-card">
+                            <div class="action-icon">
+                                <i class="fas fa-language"></i>
+                            </div>
+                            <h3>ဘာသာပြန်ဆိုရန်</h3>
+                            <p>စာသားများကို ဘာသာစကားအမျိုးမျိုးသို့ ပြန်ဆိုပေးခြင်း</p>
+                        </div>
+                        <div class="action-card">
+                            <div class="action-icon">
+                                <i class="fas fa-file-alt"></i>
+                            </div>
+                            <h3>စာတမ်းရေးသားရန်</h3>
+                            <p>စာတမ်း၊ အစီရင်ခံစာများ ရေးသားရန်</p>
+                        </div>
+                        <div class="action-card">
+                            <div class="action-icon">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <h3>ကုဒ်ရေးသားရန်</h3>
+                            <p> programming ကုဒ်များ ရေးသားရန်</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/loader_effect.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/button.js"></script>
+</body>
+</html>
