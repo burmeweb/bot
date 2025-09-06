@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ပရိုဖိုင်း - Burme Mark AI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/update_2.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+    </div>
+
+    <!-- Main Layout -->
+    <div class="app-container">
+        <!-- Side Navigation -->
+        <nav class="side-nav" id="sideNav">
+            <div class="nav-header">
+                <div class="logo">
+                    <img src="../assets/logo.png" alt="Burme Mark AI">
+                    <span class="logo-text">Burme Mark AI</span>
+                </div>
+                <button class="nav-toggle" id="navToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <div class="nav-content">
+                <div class="nav-user">
+                    <div class="user-avatar">
+                        <img src="../assets/user.png" alt="User">
+                    </div>
+                    <div class="user-info">
+                        <div class="user-name">ဧဝါချို</div>
+                        <div class="user-status">အဆင့်မြင့် အသုံးပြုသူ</div>
+                    </div>
+                </div>
+
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="main.html">
+                            <i class="fas fa-home"></i>
+                            <span class="nav-text">ပင်မစာမျက်နှာ</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="dashboard.html">
+                            <i class="fas fa-chart-line"></i>
+                            <span class="nav-text">ပုံမှန်အချက်အလက်</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="history_view.html">
+                            <i class="fas fa-history"></i>
+                            <span class="nav-text">မှတ်တမ်း</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="docs.html">
+                            <i class="fas fa-book"></i>
+                            <span class="nav-text">စာရွက်စာတမ်းများ</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="setting.html">
+                            <i class="fas fa-cog"></i>
+                            <span class="nav-text">ဆက်တင်များ</span>
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="profile.html">
+                            <i class="fas fa-user"></i>
+                            <span class="nav-text">ပရိုဖိုင်း</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html">
+                            <i class="fas fa-info-circle"></i>
+                            <span class="nav-text">ကျွန်ုပ်တို့အကြောင်း</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="nav-footer">
+                <a href="../user/login.html" class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span class="nav-text">ထွက်မည်</span>
+                </a>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="content-header">
+                <h1>ပရိုဖိုင်း</h1>
+                <p>သင့်ကိုယ်ရေးကိုယ်တာအချက်အလက်များ</p>
+            </div>
+
+            <div class="content-body">
+                <div class="profile-container">
+                    <!-- Profile Header -->
+                    <div class="profile-header">
+                        <div class="profile-avatar">
+                            <img src="../assets/user.png" alt="User Avatar" id="userAvatar">
+                            <div class="avatar-actions">
+                                <button class="avatar-action-btn" id="changeAvatar">
+                                    <i class="fas fa-camera"></i>
+                                    ဓာတ်ပုံပြောင်းရန်
+                                </button>
+                                <input type="file" id="avatarUpload" accept="image/*" style="display: none;">
+                            </div>
+                        </div>
+                        
+                        <div class="profile-info">
+                            <h2>ဧဝါချိုထွန်း</h2>
+                            <p class="profile-email">ewakhio@example.com</p>
+                            <p class="profile-bio">ဒီဂျစ်တယ်စီးပွားရေးလုပ်ငန်းရှင်နှင့် AI နည်းပညာဝါသနာရှင်</p>
+                            
+                            <div class="profile-stats">
+                                <div class="profile-stat">
+                                    <div class="stat-number">128</div>
+                                    <div class="stat-label">စကားပြောခန်းများ</div>
+                                </div>
+                                <div class="profile-stat">
+                                    <div class="stat-number">89%</div>
+                                    <div class="stat-label">အောင်မြင်မှုနှုန်း</div>
+                                </div>
+                                <div class="profile-stat">
+                                    <div class="stat-number">15</div>
+                                    <div class="stat-label">ရက်သတ္တပတ်များ</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Profile Content -->
+                    <div class="profile-content">
+                        <!-- Personal Information -->
+                        <div class="profile-section">
+                            <h3>ကိုယ်ရေးအချက်အလက်</h3>
+                            <div class="profile-card">
+                                <form class="profile-form">
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="profileFirstName">အမည်၏အရှေ့ဆုံးစာလုံး</label>
+                                            <input type="text" id="profileFirstName" value="ဧဝါချို">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="profileLastName">အမည်၏နောက်ဆုံးစာလုံး</label>
+                                            <input type="text" id="profileLastName" value="ထွန်း">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="profileEmail">အီးမေးလ်</label>
+                                        <input type="email" id="profileEmail" value="ewakhio@example.com">
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="profilePhone">ဖုန်းနံပါတ်</label>
+                                        <input type="tel" id="profilePhone" value="09 123 456 789">
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="profileBio">မိမ်အကြောင်း</label>
+                                        <textarea id="profileBio" rows="4">ဒီဂျစ်တယ်စီးပွားရေးလုပ်ငန်းရှင်နှင့် AI နည်းပညာဝါသနာရှင်</textarea>
+                                    </div>
+                                    
+                                    <button type="submit" class="btn btn-primary">ပြောင်းလဲမှုများသိမ်းဆည်းရန်</button>
+                                </form>
+                            </div>
+                        </div>
+
+                        <!-- Account Information -->
+                        <div class="profile-section">
+                            <h3>အကောင့်အချက်အလက်</h3>
+                            <div class="profile-card">
+                                <div class="account-info">
+                                    <div class="info-item">
+                                        <span class="info-label">အသုံးပြုသူအမည်</span>
+                                        <span class="info-value">ewakhio</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="info-label">အကောင့်အမျိုးအစား</span>
+                                        <span class="info-value">အဆင့်မြင့် အသုံးပြုသူ</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="info-label">အကောင့်ဖွင့်သည့်ရက်စွဲ</span>
+                                        <span class="info-value">၂၃ ဇန်နဝါရီ ၂၀၂၃</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="info-label">နောက်ဆုံးဝင်ရောက်မှု</span>
+                                        <span class="info-value">ယနေ့ 10:24 AM</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Subscription Information -->
+                        <div class="profile-section">
+                            <h3>စာရင်းသွင်းမှုအချက်အလက်</h3>
+                            <div class="profile-card">
+                                <div class="subscription-info">
+                                    <div class="subscription-status active">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>လက်ရှိစာရင်းသွင်းထားပါသည်</span>
+                                    </div>
+                                    
+                                    <div class="subscription-details">
+                                        <div class="subscription-plan">
+                                            <h4>အဆင့်မြင့် ပက်ကေ့ဂျ်</h4>
+                                            <p>လစဉ် $9.99</p>
+                                        </div>
+                                        
+                                        <div class="subscription-date">
+                                            <div class="date-item">
+                                                <span class="date-label">စတင်သည့်ရက်စွဲ</span>
+                                                <span class="date-value">၁ ဖေဖော်ဝါရီ ၂၀၂၃</span>
+                                            </div>
+                                            <div class="date-item">
+                                                <span class="date-label">နောက်ဆုံးရက်စွဲ</span>
+                                                <span class="date-value">၂၈ ဖေဖော်ဝါရီ ၂၀၂၃</span>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="subscription-actions">
+                                            <button class="btn btn-secondary">စာရင်းသွင်းမှုပြောင်းရန်</button>
+                                            <button class="btn btn-outline">ငွေပေးချေမှုမှတ်တမ်း</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Security Settings -->
+                        <div class="profile-section">
+                            <h3>လုံခြုံရေးဆက်တင်များ</h3>
+                            <div class="profile-card">
+                                <div class="security-settings">
+                                    <div class="security-item">
+                                        <div class="security-info">
+                                            <h4>လျှို့ဝှက်နံပါတ်</h4>
+                                            <p>နောက်ဆုံးပြောင်းလဲမှု - ၁၅ ရက်အကြာက</p>
+                                        </div>
+                                        <button class="btn btn-outline" id="changePassword">လျှို့ဝှက်နံပါတ်ပြောင်းရန်</button>
+                                    </div>
+                                    
+                                    <div class="security-item">
+                                        <div class="security-info">
+                                            <h4>နှစ်ဆခိုင်မာရေးစနစ်</h4>
+                                            <p>လက်ရှိပိတ်ထားပါသည်</p>
+                                        </div>
+                                        <button class="btn btn-outline" id="enable2FA">ဖွင့်ရန်</button>
+                                    </div>
+                                    
+                                    <div class="security-item">
+                                        <div class="security-info">
+                                            <h4>ချိတ်ဆက်ထားသောအကောင့်များ</h4>
+                                            <p>Google, Facebook</p>
+                                        </div>
+                                        <button class="btn btn-outline" id="manageAccounts">စီမံရန်</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/user_profile.js"></script>
+</body>
+                      </html>
