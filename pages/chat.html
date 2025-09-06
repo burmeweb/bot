@@ -30,33 +30,12 @@
                 </div>
             </div>
             
-            <div class="header-center">
-                <nav class="main-nav">
-                    <a href="#chat" class="nav-btn active" data-type="chat">
-                        <i class="fas fa-comments"></i>
-                        <span class="nav-text">စကားပြောရန်</span>
-                    </a>
-                    <a href="#text" class="nav-btn" data-type="text">
-                        <i class="fas fa-file-alt"></i>
-                        <span class="nav-text">စာသား</span>
-                    </a>
-                    <a href="#image" class="nav-btn" data-type="image">
-                        <i class="fas fa-image"></i>
-                        <span class="nav-text">ပုံများ</span>
-                    </a>
-                    <a href="#coder" class="nav-btn" data-type="coder">
-                        <i class="fas fa-code"></i>
-                        <span class="nav-text">ကုဒ်</span>
-                    </a>
-                </nav>
-            </div>
-            
             <div class="header-right">
                 <button class="new-chat-btn" id="newChatBtn">
                     <i class="fas fa-plus"></i>
                     <span class="btn-text">အသစ်</span>
                 </button>
-                <a href="../pages/setting.html" class="settings-btn">
+                <a href="../pages/option.html" class="settings-btn">
                     <i class="fas fa-cog"></i>
                 </a>
             </div>
@@ -68,24 +47,54 @@
         <!-- Sidebar for Desktop -->
         <aside class="chat-sidebar" id="chatSidebar">
             <div class="sidebar-header">
-                <h3>စကားပြောခန်းများ</h3>
+                <h3>မီနူးများ</h3>
                 <button class="close-sidebar" id="closeSidebar">
                     <i class="fas fa-times"></i>
                 </button>
             </div>
-            <div class="chat-history">
-                <div class="history-item active">
-                    <i class="fas fa-comment"></i>
-                    <span>လက်ရှိစကားပြောခန်း</span>
+            <div class="sidebar-menu">
+                <a href="../index.html" class="menu-item">
+                    <i class="fas fa-home"></i>
+                    <span>ပင်မစာမျက်နှာ</span>
+                </a>
+                <button class="menu-item" id="newChatMenuBtn">
+                    <i class="fas fa-plus"></i>
+                    <span>စကားပြောခန်းအသစ်</span>
+                </button>
+                <div class="menu-section">
+                    <h4>စကားပြောမှတ်တမ်းများ</h4>
+                    <div class="history-item active">
+                        <i class="fas fa-comment"></i>
+                        <span>လက်ရှိစကားပြောခန်း</span>
+                    </div>
+                    <div class="history-item">
+                        <i class="fas fa-comment"></i>
+                        <span>Programming မေးခွန်းများ</span>
+                    </div>
+                    <div class="history-item">
+                        <i class="fas fa-comment"></i>
+                        <span>ဘာသာပြန်ဆိုမှုများ</span>
+                    </div>
                 </div>
-                <div class="history-item">
-                    <i class="fas fa-comment"></i>
-                    <span>Programming မေးခွန်းများ</span>
+                <div class="menu-section">
+                    <h4>ဖန်တီးမှုမှတ်တမ်းများ</h4>
+                    <div class="history-item">
+                        <i class="fas fa-file-alt"></i>
+                        <span>စာသားဖန်တီးမှုများ</span>
+                    </div>
+                    <div class="history-item">
+                        <i class="fas fa-image"></i>
+                        <span>ပုံဖန်တီးမှုများ</span>
+                    </div>
+                    <div class="history-item">
+                        <i class="fas fa-code"></i>
+                        <span>ကုဒ်ဖန်တီးမှုများ</span>
+                    </div>
                 </div>
-                <div class="history-item">
-                    <i class="fas fa-comment"></i>
-                    <span>ဘာသာပြန်ဆိုမှုများ</span>
-                </div>
+                <button class="menu-item clear-btn">
+                    <i class="fas fa-trash"></i>
+                    <span>မှတ်တမ်းများကိုရှင်းလင်းရန်</span>
+                </button>
             </div>
         </aside>
 
@@ -107,17 +116,20 @@
 
                 <div class="chat-input-container">
                     <div class="input-actions">
-                        <button class="action-btn voice-btn" title="အသံဖြင့်ပြောရန်">
+                        <button class="action-btn voice-btn" title="အသံဖြင့်ပြောရန်" id="voiceBtn">
                             <i class="fas fa-microphone"></i>
                         </button>
-                        <button class="action-btn image-btn" title="ပုံတင်ရန်">
+                        <button class="action-btn image-btn" title="ပုံတင်ရန်" id="uploadImageBtn">
                             <i class="fas fa-image"></i>
                         </button>
-                        <button class="action-btn file-btn" title="ဖိုင်တင်ရန်">
-                            <i class="fas fa-paperclip"></i>
-                        </button>
-                        <button class="action-btn camera-btn" title="ကင်မရာ">
+                        <button class="action-btn camera-btn" title="ကင်မရာ" id="cameraBtn">
                             <i class="fas fa-camera"></i>
+                        </button>
+                        <button class="action-btn generate-btn" title="AI ဖန်တီးရန်" id="generateBtn">
+                            <i class="fas fa-magic"></i>
+                        </button>
+                        <button class="action-btn code-btn" title="ကုဒ်ရေးရန်" id="codeBtn">
+                            <i class="fas fa-code"></i>
                         </button>
                     </div>
                     <div class="input-group">
@@ -129,109 +141,133 @@
                 </div>
             </div>
 
-            <!-- Text Generation Interface -->
-            <div class="text-interface" id="textTab">
-                <div class="text-header">
-                    <h3>စာသားများ ဖန်တီးရန်</h3>
-                    <p>စာသား၊ စာတမ်း၊ ကဗျာများ ဖန်တီးနိုင်ပါသည်</p>
-                </div>
-                <div class="text-controls">
-                    <select id="textStyle">
-                        <option value="general">သာမန်စာသား</option>
-                        <option value="formal">တရားဝင်စာသား</option>
-                        <option value="casual">ချစ်စနိုးစာသား</option>
-                        <option value="poem">ကဗျာ</option>
-                        <option value="story">ပုံပြင်</option>
-                    </select>
-                    <input type="number" id="textLength" min="50" max="1000" value="200" placeholder="စာလုံးရေ">
-                </div>
-                <div class="text-area">
-                    <textarea id="textPrompt" placeholder="စာသားဖန်တီးရန် prompt ရိုက်ထည့်ပါ..."></textarea>
-                    <button class="generate-btn" id="generateText">
-                        <i class="fas fa-magic"></i>
-                        စာသားဖန်တီးရန်
+            <!-- AI Generation Panel -->
+            <div class="generation-panel" id="generationPanel">
+                <div class="panel-header">
+                    <h3>AI ဖန်တီးမှုကိရိယာ</h3>
+                    <button class="close-panel" id="closePanel">
+                        <i class="fas fa-times"></i>
                     </button>
                 </div>
-                <div class="text-output" id="textOutput"></div>
-            </div>
-
-            <!-- Image Generation Interface -->
-            <div class="image-interface" id="imageTab">
-                <div class="image-header">
-                    <h3>ပုံများ ဖန်တီးရန်</h3>
-                    <p>AI ဖြင့် စိတ်ကူးရှိရာ ပုံများ ဖန်တီးနိုင်ပါသည်</p>
+                <div class="panel-tabs">
+                    <button class="tab-btn active" data-tab="text">စာသား</button>
+                    <button class="tab-btn" data-tab="image">ပုံများ</button>
+                    <button class="tab-btn" data-tab="code">ကုဒ်</button>
                 </div>
-                <div class="image-controls">
-                    <select id="imageStyle">
-                        <option value="realistic">လက်တွေ့ဆန်သော</option>
-                        <option value="artistic">အနုပညာဆန်သော</option>
-                        <option value="cartoon">ကာတွန်းပုံစံ</option>
-                        <option value="abstract">ယေဘုယျ</option>
-                    </select>
-                    <select id="imageSize">
-                        <option value="1024x1024">1024x1024</option>
-                        <option value="1024x1792">1024x1792</option>
-                        <option value="1792x1024">1792x1024</option>
-                    </select>
-                </div>
-                <div class="image-input">
-                    <textarea id="imagePrompt" placeholder="ပုံဖန်တီးရန် prompt ရိုက်ထည့်ပါ..."></textarea>
-                    <button class="generate-btn" id="generateImage">
-                        <i class="fas fa-paint-brush"></i>
-                        ပုံဖန်တီးရန်
-                    </button>
-                </div>
-                <div class="image-output" id="imageOutput">
-                    <div class="upload-area" id="imageUploadArea">
-                        <i class="fas fa-cloud-upload-alt"></i>
-                        <p>ပုံအားဆွဲထည့်ရန် သို့မဟုတ် နှိပ်ပါ</p>
-                        <input type="file" id="imageUpload" accept="image/*" hidden>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Coder Interface -->
-            <div class="coder-interface" id="coderTab">
-                <div class="coder-header">
-                    <h3>ကုဒ်များ ရေးသားရန်</h3>
-                    <p>Programming ကုဒ်များ ရေးသားနိုင်ပါသည်</p>
-                </div>
-                <div class="coder-controls">
-                    <select id="codeLanguage">
-                        <option value="javascript">JavaScript</option>
-                        <option value="python">Python</option>
-                        <option value="html">HTML/CSS</option>
-                        <option value="java">Java</option>
-                        <option value="php">PHP</option>
-                        <option value="csharp">C#</option>
-                    </select>
-                    <button class="run-btn" id="runCode">
-                        <i class="fas fa-play"></i>
-                        ကုဒ်စမ်းရန်
-                    </button>
-                </div>
-                <div class="coder-container">
-                    <div class="code-editor">
-                        <div class="editor-header">
-                            <span>ကုဒ်ရေးသားရန်</span>
-                            <button class="copy-btn" id="copyCode">
-                                <i class="fas fa-copy"></i>
-                            </button>
+                
+                <div class="panel-content">
+                    <!-- Text Generation -->
+                    <div class="tab-content active" id="textTab">
+                        <div class="input-group">
+                            <label for="textPrompt">စာသားအမျိုးအစား</label>
+                            <select id="textStyle">
+                                <option value="general">သာမန်စာသား</option>
+                                <option value="formal">တရားဝင်စာသား</option>
+                                <option value="casual">ချစ်စနိုးစာသား</option>
+                                <option value="poem">ကဗျာ</option>
+                                <option value="story">ပုံပြင်</option>
+                            </select>
                         </div>
-                        <textarea id="codeInput" placeholder="ကုဒ်ရေးသားရန် prompt ရိုက်ထည့်ပါ..."></textarea>
-                        <button class="generate-btn" id="generateCode">
+                        <div class="input-group">
+                            <label for="textPrompt">စာသားဖန်တီးရန် prompt</label>
+                            <textarea id="textPrompt" placeholder="စာသားဖန်တီးရန် prompt ရိုက်ထည့်ပါ..."></textarea>
+                        </div>
+                        <button class="generate-action-btn" id="generateText">
+                            <i class="fas fa-magic"></i>
+                            စာသားဖန်တီးရန်
+                        </button>
+                        <div class="output-container">
+                            <div class="output-header">
+                                <span>ရရှိသောစာသား</span>
+                                <button class="copy-btn" id="copyText">
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                            </div>
+                            <div class="text-output" id="textOutput"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Image Generation -->
+                    <div class="tab-content" id="imageTab">
+                        <div class="input-group">
+                            <label for="imageStyle">ပုံအမျိုးအစား</label>
+                            <select id="imageStyle">
+                                <option value="realistic">လက်တွေ့ဆန်သော</option>
+                                <option value="artistic">အနုပညာဆန်သော</option>
+                                <option value="cartoon">ကာတွန်းပုံစံ</option>
+                                <option value="abstract">ယေဘုယျ</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label for="imagePrompt">ပုံဖန်တီးရန် prompt</label>
+                            <textarea id="imagePrompt" placeholder="ပုံဖန်တီးရန် prompt ရိုက်ထည့်ပါ..."></textarea>
+                        </div>
+                        <div class="upload-option">
+                            <div class="upload-area" id="imageUploadArea">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                <p>ပုံအားဆွဲထည့်ရန် သို့မဟုတ် နှိပ်ပါ</p>
+                                <input type="file" id="imageUpload" accept="image/*" hidden>
+                            </div>
+                        </div>
+                        <button class="generate-action-btn" id="generateImage">
+                            <i class="fas fa-paint-brush"></i>
+                            ပုံဖန်တီးရန်
+                        </button>
+                        <div class="output-container">
+                            <div class="output-header">
+                                <span>ရရှိသောပုံ</span>
+                                <button class="download-btn" id="downloadImage">
+                                    <i class="fas fa-download"></i>
+                                </button>
+                            </div>
+                            <div class="image-output" id="imageOutput"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Code Generation -->
+                    <div class="tab-content" id="codeTab">
+                        <div class="input-group">
+                            <label for="codeLanguage">Programming ဘာသာ</label>
+                            <select id="codeLanguage">
+                                <option value="javascript">JavaScript</option>
+                                <option value="python">Python</option>
+                                <option value="html">HTML/CSS</option>
+                                <option value="java">Java</option>
+                                <option value="php">PHP</option>
+                                <option value="csharp">C#</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label for="codePrompt">ကုဒ်ရေးသားရန် prompt</label>
+                            <textarea id="codePrompt" placeholder="ကုဒ်ရေးသားရန် prompt ရိုက်ထည့်ပါ..."></textarea>
+                        </div>
+                        <button class="generate-action-btn" id="generateCode">
                             <i class="fas fa-code"></i>
                             ကုဒ်ရေးသားရန်
                         </button>
-                    </div>
-                    <div class="code-preview">
-                        <div class="preview-header">
-                            <span>ရ效果 preview</span>
-                            <button class="refresh-btn" id="refreshPreview">
-                                <i class="fas fa-sync-alt"></i>
-                            </button>
+                        <div class="output-container">
+                            <div class="output-header">
+                                <span>ရရှိသောကုဒ်</span>
+                                <div>
+                                    <button class="run-btn" id="runCode">
+                                        <i class="fas fa-play"></i>
+                                    </button>
+                                    <button class="copy-btn" id="copyCode">
+                                        <i class="fas fa-copy"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <textarea id="codeOutput" class="code-output"></textarea>
+                            <div class="preview-container">
+                                <div class="preview-header">
+                                    <span>ရ效果 preview</span>
+                                    <button class="refresh-btn" id="refreshPreview">
+                                        <i class="fas fa-sync-alt"></i>
+                                    </button>
+                                </div>
+                                <iframe id="previewFrame" class="preview-frame"></iframe>
+                            </div>
                         </div>
-                        <iframe id="previewFrame"></iframe>
                     </div>
                 </div>
             </div>
@@ -243,7 +279,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h3>အသံဖြင့်ပြောရန်</h3>
-                <span class="close" onclick="closeModal('voiceModal')">&times;</span>
+                <span class="close" id="closeVoiceModal">&times;</span>
             </div>
             <div class="modal-body">
                 <div class="voice-recorder">
@@ -264,8 +300,16 @@
         </div>
     </div>
 
+    <!-- Loading Animation -->
+    <div class="loading-animation" id="loadingAnimation">
+        <div class="loading-spinner">
+            <div class="spinner"></div>
+            <p>စဉ်းစားနေပါတယ်...</p>
+        </div>
+    </div>
+
     <!-- Scripts -->
     <script src="../js/main.js"></script>
     <script src="../js/chat.js"></script>
 </body>
-                  </html>
+                            </html>
