@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>မှတ်တမ်း - Burme Mark AI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/update.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loader">
+        <div class="loader-content">
+            <img src="../assets/loader.svg" alt="Loading" class="loader-icon">
+            <div class="loading-text">တင်ဆောင်နေသည်...</div>
+        </div>
+    </div>
+
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+    </div>
+
+    <!-- Main Layout -->
+    <div class="app-container">
+        <!-- Side Navigation -->
+        <nav class="side-nav" id="sideNav">
+            <!-- Navigation content same as index.html -->
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="content-header">
+                <h1>မှတ်တမ်း</h1>
+                <p>သင့်ယခင်ဆွေးနွေးမှုများနှင့် လှုပ်ရှားမှုများ</p>
+            </div>
+
+            <div class="content-body">
+                <!-- History Filters -->
+                <div class="history-filters">
+                    <div class="filter-group">
+                        <label for="dateFilter">ရက်စွဲဖြင့်စစ်ထုတ်ရန်</label>
+                        <select id="dateFilter">
+                            <option value="all">ရက်စွဲအားလုံး</option>
+                            <option value="today">ယနေ့</option>
+                            <option value="week">ဒီအပတ်</option>
+                            <option value="month">ဒီလ</option>
+                            <option value="custom">စိတ်ကြိုက်</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="typeFilter">အမျိုးအစားဖြင့်စစ်ထုတ်ရန်</label>
+                        <select id="typeFilter">
+                            <option value="all">အမျိုးအစားအားလုံး</option>
+                            <option value="chat">စကားပြောခန်း</option>
+                            <option value="translation">ဘာသာပြန်ဆိုမှု</option>
+                            <option value="code">ကုဒ်ရေးသားခြင်း</option>
+                            <option value="document">စာတမ်းရေးသားခြင်း</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="searchInput">ရှာဖွေရန်</label>
+                        <div class="search-box">
+                            <input type="text" id="searchInput" placeholder="မှတ်တမ်းများအား ရှာဖွေရန်...">
+                            <button class="search-btn">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- History Actions -->
+                <div class="history-actions">
+                    <button class="btn btn-secondary" id="clearHistory">
+                        <i class="fas fa-trash"></i>
+                        မှတ်တမ်းများရှင်းလင်းရန်
+                    </button>
+                    <button class="btn btn-secondary" id="exportHistory">
+                        <i class="fas fa-download"></i>
+                        မှတ်တမ်းများထုတ်ယူရန်
+                    </button>
+                </div>
+
+                <!-- History List -->
+                <div class="history-list" id="historyList">
+                    <div class="history-item">
+                        <div class="history-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="history-content">
+                            <h3>Python Data Analysis Code</h3>
+                            <p>Sales data analysis with pandas and matplotlib</p>
+                            <div class="history-meta">
+                                <span class="history-date">ယနေ့ 10:24 AM</span>
+                                <span class="history-type">ကုဒ်ရေးသားခြင်း</span>
+                                <span class="history-duration">15m</span>
+                            </div>
+                        </div>
+                        <div class="history-actions">
+                            <button class="action-btn" title="ပြန်လည်အသုံးပြုရန်">
+                                <i class="fas fa-redo"></i>
+                            </button>
+                            <button class="action-btn" title="ဖျက်ရန်">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="history-item">
+                        <div class="history-icon">
+                            <i class="fas fa-language"></i>
+                        </div>
+                        <div class="history-content">
+                            <h3>English to Myanmar Translation</h3>
+                            <p>Business document translation with technical terms</p>
+                            <div class="history-meta">
+                                <span class="history-date">ယနေ့ 09:45 AM</span>
+                                <span class="history-type">ဘာသာပြန်ဆိုမှု</span>
+                                <span class="history-duration">8m</span>
+                            </div>
+                        </div>
+                        <div class="history-actions">
+                            <button class="action-btn" title="ပြန်လည်အသုံးပြုရန်">
+                                <i class="fas fa-redo"></i>
+                            </button>
+                            <button class="action-btn" title="ဖျက်ရန်">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="history-item">
+                        <div class="history-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <div class="history-content">
+                            <h3>Business Proposal Draft</h3>
+                            <p>Marketing strategy proposal for new product launch</p>
+                            <div class="history-meta">
+                                <span class="history-date">မနေ့ 03:15 PM</span>
+                                <span class="history-type">စာတမ်းရေးသားခြင်း</span>
+                                <span class="history-duration">22m</span>
+                            </div>
+                        </div>
+                        <div class="history-actions">
+                            <button class="action-btn" title="ပြန်လည်အသုံးပြုရန်">
+                                <i class="fas fa-redo"></i>
+                            </button>
+                            <button class="action-btn" title="ဖျက်ရန်">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="history-item">
+                        <div class="history-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <div class="history-content">
+                            <h3>Marketing Strategy Ideas</h3>
+                            <p>Creative marketing ideas for social media campaign</p>
+                            <div class="history-meta">
+                                <span class="history-date">မနေ့ 11:30 AM</span>
+                                <span class="history-type">စကားပြောခန်း</span>
+                                <span class="history-duration">12m</span>
+                            </div>
+                        </div>
+                        <div class="history-actions">
+                            <button class="action-btn" title="ပြန်လည်အသုံးပြုရန်">
+                                <i class="fas fa-redo"></i>
+                            </button>
+                            <button class="action-btn" title="ဖျက်ရန်">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="history-item">
+                        <div class="history-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="history-content">
+                            <h3>Data Analysis Report</h3>
+                            <p>Quarterly sales data analysis and visualization</p>
+                            <div class="history-meta">
+                                <span class="history-date">၃ ရက်အကြာ</span>
+                                <span class="history-type">စာတမ်းရေးသားခြင်း</span>
+                                <span class="history-duration">18m</span>
+                            </div>
+                        </div>
+                        <div class="history-actions">
+                            <button class="action-btn" title="ပြန်လည်အသုံးပြုရန်">
+                                <i class="fas fa-redo"></i>
+                            </button>
+                            <button class="action-btn" title="ဖျက်ရန်">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pagination -->
+                <div class="pagination">
+                    <button class="pagination-btn" disabled>
+                        <i class="fas fa-chevron-left"></i>
+                        နောက်သို့
+                    </button>
+                    <div class="pagination-pages">
+                        <span class="pagination-page active">1</span>
+                        <span class="pagination-page">2</span>
+                        <span class="pagination-page">3</span>
+                        <span class="pagination-dots">...</span>
+                        <span class="pagination-page">10</span>
+                    </div>
+                    <button class="pagination-btn">
+                        ရှေ့သို့
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../js/loader_effect.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/history.js"></script>
+</body>
+</html>
