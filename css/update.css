@@ -1,0 +1,182 @@
+/* Additional styles for enhanced UI */
+
+/* Enhanced button effects */
+.action-btn, .send-btn {
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.action-btn:after, .send-btn:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: var(--transition);
+}
+
+.action-btn:hover:after, .send-btn:hover:after {
+    left: 100%;
+}
+
+/* Enhanced card hover effects */
+.action-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.action-card:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(108,92,231,0.1) 0%, rgba(162,155,254,0.1) 100%);
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.action-card:hover:before {
+    opacity: 1;
+}
+
+/* Enhanced input focus effect */
+.input-group input {
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.input-group input:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(108, 92, 231, 0.3);
+}
+
+/* Enhanced navigation item effects */
+.nav-item a {
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-item a:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+    transition: var(--transition);
+}
+
+.nav-item a:hover:after {
+    left: 100%;
+}
+
+/* Typing animation enhancement */
+@keyframes typing {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+}
+
+/* Enhanced logo animation */
+.logo img {
+    transition: var(--transition);
+}
+
+.logo:hover img {
+    transform: rotate(10deg) scale(1.1);
+}
+
+/* Enhanced progress bar animation */
+.progress {
+    background: linear-gradient(90deg, #a29bfe, #6c5ce7, #fd79a8);
+    background-size: 200% 100%;
+    animation: progressGradient 2s linear infinite, loading 2.5s ease-in-out forwards;
+}
+
+@keyframes progressGradient {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+/* Enhanced message bubbles */
+.message-content {
+    transition: var(--transition);
+}
+
+.ai-message .message-content:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.user-message .message-content:hover {
+    box-shadow: 0 8px 20px rgba(108, 92, 231, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Enhanced background shapes */
+.shape {
+    filter: blur(15px);
+    transition: var(--transition);
+}
+
+.shape:hover {
+    filter: blur(10px);
+    transform: scale(1.1);
+}
+
+/* Mobile menu toggle enhancement */
+.nav-toggle {
+    transition: var(--transition);
+}
+
+.nav-toggle:hover {
+    transform: rotate(90deg);
+}
+
+/* Enhanced scrollbar for webkit browsers */
+.chat-messages::-webkit-scrollbar {
+    width: 8px;
+}
+
+.chat-messages::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+    background: rgba(108, 92, 231, 0.5);
+    border-radius: 10px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb:hover {
+    background: var(--primary);
+}
+
+/* Focus states for accessibility */
+.action-btn:focus, .send-btn:focus, .nav-item a:focus {
+    outline: 2px solid white;
+    outline-offset: 2px;
+}
+
+.input-group input:focus {
+    outline: none;
+}
+
+/* Reduced motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+  }
