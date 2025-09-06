@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>အမှားတစ်ခုဖြစ်နေပါသည် - Burme Mark AI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/update_2.css">
+</head>
+<body class="error-page">
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+
+    <div class="error-container">
+        <div class="error-content">
+            <div class="error-icon">
+                <i class="fas fa-exclamation-triangle"></i>
+            </div>
+            
+            <h1>၅၀၀</h1>
+            <h2>Server Error</h2>
+            
+            <p>စနစ်အတွင်း အမှားတစ်ခုဖြစ်နေပါသည်။ ကျေးဇူးပြု၍ နောက်မှထပ်ကြိုးစားပါ။</p>
+            
+            <div class="error-actions">
+                <a href="../index.html" class="btn btn-primary">
+                    <i class="fas fa-home"></i>
+                    ပင်မစာမျက်နှာသို့
+                </a>
+                <button class="btn btn-secondary" id="retryButton">
+                    <i class="fas fa-redo"></i>
+                    ထပ်ကြိုးစားရန်
+                </button>
+            </div>
+            
+            <div class="error-details">
+                <button class="btn btn-link" id="showDetails">
+                    <i class="fas fa-info-circle"></i>
+                    အသေးစိတ်ကြည့်ရန်
+                </button>
+                
+                <div class="details-content" id="errorDetails">
+                    <p><strong>Error ID:</strong> ERR_500_8F3A2B</p>
+                    <p><strong>Time:</strong> ယနေ့ 10:24:35 AM</p>
+                    <p><strong>Request URL:</strong> https://burmemarkai.com/api/chat</p>
+                    <p><strong>Error Message:</strong> Internal server error - Database connection timeout</p>
+                    
+                    <div class="technical-info">
+                        <h4>နည်းပညာဆိုင်ရာအချက်အလက်</h4>
+                        <pre>{
+  "status": 500,
+  "error": "DatabaseConnectionException",
+  "message": "Connection to MongoDB cluster timed out",
+  "timestamp": "2023-02-15T10:24:35Z"
+}</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="error-support">
+            <h3>အကူအညီလိုအပ်ပါသလား?</h3>
+            <p>ကျေးဇူးပြု၍ ကျွန်ုပ်တို့၏အကူအညီဌာနနှင့် ဆက်သွယ်ပါ</p>
+            
+            <div class="support-options">
+                <a href="../pages/docs.html" class="support-option">
+                    <i class="fas fa-book"></i>
+                    <span>အကူအညီစာရွက်စာတမ်းများ</span>
+                </a>
+                
+                <a href="mailto:support@burmemarkai.com" class="support-option">
+                    <i class="fas fa-envelope"></i>
+                    <span>support@burmemarkai.com</span>
+                </a>
+                
+                <a href="tel:+959123456789" class="support-option">
+                    <i class="fas fa-phone"></i>
+                    <span>+95 9 123 456 789</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/error.js"></script>
+</body>
+  </html>
