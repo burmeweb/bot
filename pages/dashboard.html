@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ပုံမှန်အချက်အလက် - Burme Mark AI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chart.js">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/update.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loader">
+        <div class="loader-content">
+            <div class="logo">
+                <img src="../assets/logo.png" alt="Burme Mark AI">
+            </div>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+            <div class="loading-text">တင်ဆောင်နေသည်...</div>
+        </div>
+    </div>
+
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+    </div>
+
+    <!-- Main Layout -->
+    <div class="app-container">
+        <!-- Side Navigation -->
+        <nav class="side-nav" id="sideNav">
+            <!-- Navigation content same as index.html -->
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="content-header">
+                <h1>ပုံမှန်အချက်အလက်</h1>
+                <p>သင့်လှုပ်ရှားမှုများနှင့် စာရင်းဇယားများ</p>
+            </div>
+
+            <div class="content-body">
+                <!-- Stats Overview -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>စုစုပေါင်းဆွေးနွေးမှုများ</h3>
+                            <div class="stat-number">128</div>
+                            <div class="stat-change positive">
+                                <i class="fas fa-arrow-up"></i> 12% မကြာသေးခင်က
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>ပျမ်းမျှအချိန်</h3>
+                            <div class="stat-number">24m</div>
+                            <div class="stat-change positive">
+                                <i class="fas fa-arrow-up"></i> 5% မကြာသေးခင်က
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>အောင်မြင်မှုနှုန်း</h3>
+                            <div class="stat-number">89%</div>
+                            <div class="stat-change positive">
+                                <i class="fas fa-arrow-up"></i> 3% မကြာသေးခင်က
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>ယနေ့အသုံးပြုမှု</h3>
+                            <div class="stat-number">18</div>
+                            <div class="stat-change negative">
+                                <i class="fas fa-arrow-down"></i> 2% မနေ့က
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Charts Section -->
+                <div class="charts-section">
+                    <div class="chart-card">
+                        <div class="chart-header">
+                            <h3>လှုပ်ရှားမှုအချိန်ဇယား</h3>
+                            <select class="chart-filter" id="activityFilter">
+                                <option value="week">တစ်ပတ်</option>
+                                <option value="month">တစ်လ</option>
+                                <option value="year">တစ်နှစ်</option>
+                            </select>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="activityChart"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="chart-card">
+                        <div class="chart-header">
+                            <h3>အကြောင်းအရာအလိုက်ခွဲခြားမှု</h3>
+                            <select class="chart-filter" id="categoryFilter">
+                                <option value="week">တစ်ပတ်</option>
+                                <option value="month">တစ်လ</option>
+                                <option value="year">တစ်နှစ်</option>
+                            </select>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="categoryChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Activity -->
+                <div class="activity-section">
+                    <div class="section-header">
+                        <h2>မကြာသေးမီက လှုပ်ရှားမှုများ</h2>
+                        <a href="history_view.html" class="view-all">အားလုံးကြည့်ရန်</a>
+                    </div>
+
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div class="activity-content">
+                                <h4>Python code generation</h4>
+                                <p>Data analysis script for sales report</p>
+                                <div class="activity-meta">
+                                    <span class="activity-time">ယနေ့ 10:24 AM</span>
+                                    <span class="activity-duration">15m</span>
+                                </div>
+                            </div>
+                            <div class="activity-actions">
+                                <button class="action-btn">
+                                    <i class="fas fa-redo"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-language"></i>
+                            </div>
+                            <div class="activity-content">
+                                <h4>စာသားဘာသာပြန်ဆိုမှု</h4>
+                                <p>English to Myanmar translation</p>
+                                <div class="activity-meta">
+                                    <span class="activity-time">ယနေ့ 09:45 AM</span>
+                                    <span class="activity-duration">8m</span>
+                                </div>
+                            </div>
+                            <div class="activity-actions">
+                                <button class="action-btn">
+                                    <i class="fas fa-redo"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-file-alt"></i>
+                            </div>
+                            <div class="activity-content">
+                                <h4>စာတမ်းရေးသားခြင်း</h4>
+                                <p>Business proposal draft</p>
+                                <div class="activity-meta">
+                                    <span class="activity-time">မနေ့ 03:15 PM</span>
+                                    <span class="activity-duration">22m</span>
+                                </div>
+                            </div>
+                            <div class="activity-actions">
+                                <button class="action-btn">
+                                    <i class="fas fa-redo"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <div class="activity-content">
+                                <h4>အကြံဉာဏ်ရယူခြင်း</h4>
+                                <p>Marketing strategy suggestions</p>
+                                <div class="activity-meta">
+                                    <span class="activity-time">မနေ့ 11:30 AM</span>
+                                    <span class="activity-duration">12m</span>
+                                </div>
+                            </div>
+                            <div class="activity-actions">
+                                <button class="action-btn">
+                                    <i class="fas fa-redo"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI Usage Tips -->
+                <div class="tips-section">
+                    <div class="section-header">
+                        <h2>အသုံးပြုရန် အကြံပြုချက်များ</h2>
+                    </div>
+
+                    <div class="tips-grid">
+                        <div class="tip-card">
+                            <div class="tip-icon">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <h4>စကားစုမြန်ဆန်စွာရယူခြင်း</h4>
+                            <p>ကီးဘုတ်အတိုကောက်များသုံး၍ အလုပ်များကို မြန်ဆန်စွာလုပ်ဆောင်နိုင်ပါသည်</p>
+                        </div>
+
+                        <div class="tip-card">
+                            <div class="tip-icon">
+                                <i class="fas fa-history"></i>
+                            </div>
+                            <h4>မှတ်တမ်းများပြန်လည်ကြည့်ရှုခြင်း</h4>
+                            <p>ယခင်စကားပြောခန်းများကို ပြန်လည်ကြည့်ရှုနိုင်ပြီး အချိန်ကုန်သက်သာစေပါသည်</p>
+                        </div>
+
+                        <div class="tip-card">
+                            <div class="tip-icon">
+                                <i class="fas fa-sliders-h"></i>
+                            </div>
+                            <h4>စိတ်ကြိုက်ပြင်ဆင်ခြင်း</h4>
+                            <p>ဆက်တင်များတွင် သင့်နှင့်သင့်လျော်ရာ response style ကို ရွေးချယ်နိုင်ပါသည်</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../js/loader_effect.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/dashboard.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+  </html>
