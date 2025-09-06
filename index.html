@@ -4,15 +4,65 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sandbox Loader</title>
-  <script>
-    // Sandbox ID
-    const sandboxId = "sbx_XgpSgZsKfqx7ON1wT0uHAER31dVw";
+  <style>
+   @import url(https://fonts.googleapis.com/css?family=Open+Sans:300);
 
-    // Browser ကို Sandbox URL သို့ redirect လုပ်
-    window.location.href = `https://platform.openai.com/sandbox/${sandboxId}`;
-  </script>
+.inner {
+  position: absolute; 
+  margin: auto; 
+  width: 50px; 
+  height: 95px; 
+  top: 0px; 
+  left: 0px; 
+  bottom: 0px; 
+  right: 0px; 
+}
+
+.inner > div {
+  width: 50px; 
+  height: 50px; 
+  background-color: rgba(255, 255, 255, 0.7); 
+  border-radius: 100%; 
+  position: absolute; 
+  transition: all 0.5s ease; 
+}
+
+.inner > div:first-child {
+  margin-left: -27px; 
+  animation: one 1.5s linear 1; 
+}
+
+.inner > div:nth-child(2) {
+  margin-left: 27px; 
+  animation: two 1.5s linear 1; 
+  </style>
 </head>
-<body>
-  <p>Redirecting to OpenAI Sandbox...</p>
+<body><div class="pageLoad">
+<div class="inner">
+	<div></div>
+  <div></div> 
+  <div></div>
+  <div></div>
+</div> 
+</div>
 </body>
+<h1>Creotip.io - Alex Safayan Fork </h1> 
+
+  <script>
+    setTimeout(function() {
+  $('.inner div').addClass('done'); 
+  
+  setTimeout(function() {
+    $('.inner div').addClass('page'); 
+    
+    setTimeout(function() {
+    	$('.pageLoad').addClass('off'); 
+      
+      $('body, html').addClass('on'); 
+      
+      
+  	}, 500)
+  }, 500)
+}, 1500)
+  </script>
 </html>
